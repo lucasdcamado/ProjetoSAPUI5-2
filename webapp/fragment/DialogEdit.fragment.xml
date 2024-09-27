@@ -1,0 +1,31 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+    <Dialog title="Editar Status" id="ListDialog">
+        <VBox id="vbox1" class="sapUiSmallMargin">
+            <f:Form id="FormChange354" editable="true">
+                <f:layout>
+                    <f:ResponsiveGridLayout id="responsivelayout" labelSpanL="3" labelSpanXL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="true"></f:ResponsiveGridLayout>
+                </f:layout>
+                <f:formContainers>
+                    <f:FormContainer>
+                        <f:formElements>
+                         <f:FormElement label="Status">
+                            <f:fields>
+                                <Input value="{modelView>/Status}"/>
+                                <Input value="{modelView>/Datalock}"/>
+                                <Input value="{modelView>/Datareturn}"/>
+                            </f:fields>
+                         </f:FormElement>
+                        </f:formElements>
+                    </f:FormContainer>
+                </f:formContainers>
+            </f:Form>
+        </VBox>
+
+        <beginButton>
+            <Button text="Salvar" press="onSave" type="Emphasized" icon="sap-icon://save"/>
+        </beginButton>
+        <endButton>
+            <Button text="Voltar" press="onClose" type="Emphasized" icon="sap-icon://undo"/>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>
